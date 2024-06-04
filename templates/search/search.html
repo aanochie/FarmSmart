@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<head>
+    <title>Search</title>
+    <link rel="stylesheet" href="/static/css/disease_form.css">
+</head>
+<style>
+    .image-option {
+        display: inline-block;
+        text-align: center;
+    }
+    .image-option img {
+        width: 250px;
+        height: 250px;
+    }
+    .image-option .description {
+        margin-top: 10px;
+        font-weight: bold;
+    }
+</style>
+<body>
+    <form method="POST">
+        <h1>Select Crop</h1>
+        <div class="image-option">
+            <input type="submit" id="maize" name="crop" value="maize" >
+            <label for="maize">
+                <img src="{{ url_for('static', filename='images/maize/healthy_maize.jpg') }}" alt="Healthy Maize">
+            </label>
+            <div class="description">Maize</div>
+        </div>
+        <div class="image-option">
+            <input type="submit" id="rice" name="crop" value="rice" >
+            <label for="rice">
+                <img src="{{ url_for('static', filename='images/rice/healthy_rice.jpg') }}" alt="Healthy Rice">
+            </label>
+            <div class="description">Rice</div>
+        </div>
+    <div class="image-option">
+        <input type="submit" id="wheat" name="crop" value="wheat" >
+        <label for="wheat">
+            <img src="{{ url_for('static', filename='images/wheat/healthy_wheat.jpg') }}" alt="Healthy Wheat">
+        </label>
+        <div class="description">Wheat</div>
+    </div>
+    <div class="image-option">
+        <input type="submit" id="sugarcane" name="crop" value="sugarcane" >
+        <label for="sugarcane">
+            <img src="{{ url_for('static', filename='images/sugarcane/healthy_sugarcane.jpg') }}" alt="Healthy Sugarcane">
+        </label>
+        <div class="description">Sugarcane</div>
+    </div>
+</form>
+
+</body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+    <title>Powdery mildew in Wheat</title>
+    <link rel="stylesheet" href="/static/css/disease.css">
+</head>
+<body>
+<div class="container-text">
+    <h1>Powdery Mildew in Wheat</h1>
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/wheat/powdery_mildew_field.png') }}" alt="Powdery mildew on wheat field">
+        <p class="caption">Powdery Mildew on wheat field</p>
+    </div>
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/wheat/powdery_mildew_fungal.jpg') }}" alt="Powdery mildew on wheat plant">
+        <p class="caption">Wheat leaf showing fungal growths due to powdery mildew</p>
+    </div>
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/wheat/powdery_mildew_wet.jpg') }}" alt="Powdery mildew colonies on wheat">
+        <p class="caption">Powdery Mildew colonies on wheat leaf</p>
+    </div>
+
+    <h2>Type</h2>
+    <p><strong>Fungal</strong>: Erysiphe graminis</p>
+
+    <h2>Causes</h2>
+    <p>Powdery Mildew spreads through airborne spores that can infect plants under favorable conditions, typically cool
+        and humid weather. The fungus overwinters on crop residues and can infect new crops in the next growing season.</p>
+
+    <h2>Symptoms</h2>
+    <ul>
+        <li>White to grayish powdery growth on the upper surface of leaves, stems, and sometimes heads.</li>
+        <li>Chlorotic spots on leaves that eventually turn necrotic as the infection progresses.</li>
+        <li>Stunted growth and reduced tillering in severe cases.</li>
+        </ul>
+
+    <h2>Management</h2>
+    <ul>
+        <li><strong>Resistant Varieties:</strong> Planting wheat varieties that are resistant to Powdery Mildew.</li>
+        <li><strong>Fungicide Applications:</strong> Applying fungicides when the disease is first detected can help control its spread.</li>
+        <li><strong>Cultural Practices:</strong> Practices such as crop rotation, proper spacing, and avoiding excessive nitrogen fertilization can reduce disease pressure.</li>
+        <li><strong>Field Sanitation:</strong> Removing and destroying crop residues that can harbor the fungus.</li>
+        </ul>
+
+</div>
+</body>
+
+{% endblock %}

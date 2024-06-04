@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+    <title>Red Rot of Sugarcane</title>
+    <link rel="stylesheet" href="/static/css/disease.css">
+</head>
+<body>
+    <div class="container-text">
+        <h1>Red Rot</h1>
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='images/sugarcane/red_rot.png') }}" alt="Red Rot">
+            <p class="caption">A sugarcane crop affected by Red Rot</p>
+        </div>
+        <h2>Introduction </h2>
+        <p>Red Rot is a serious disease affecting sugarcane crops, commonly in Inodnesia and South Asia. It is signified by red and white patches and exhibits a distinct sour odour.</p>
+
+        <h2>Causes</h2>
+        <p>Red Rot is caused by the fungus <strong>Colletotrichum falcatum</strong>. The fungus can survive in soil and on infected plant debris, and can spread rapidly under favorable conditions.</p>
+
+        <h2>Symptoms</h2>
+        <p>Common symptoms of Red Rot include:</p>
+        <ul>
+            <li>Reddish discoloration of the internal stalk tissues.</li>
+            <li>White patches with red borders on the stalks.</li>
+            <li>Severe infections can lead to significant yield loss.</li>
+        </ul>
+
+        <h2>Prevention and Management</h2>
+        <p>Effective management of Red Rot involves a combination of cultural practices, resistant varieties, and fungicide applications. Here are some strategies:</p>
+        <ul>
+            <li>Rotate crops to reduce the buildup of fungal spores in the soil.</li>
+            <li>Plant resistant varieties of sugarcane.</li>
+            <li>Apply fungicides as a preventive measure, especially during favorable conditions for the disease.</li>
+            <li>Ensure proper spacing between plants to improve air circulation.</li>
+            <li>Remove and destroy infected plant debris after harvest.</li>
+        </ul>
+    </div>
+</body>
+
+{% endblock %}

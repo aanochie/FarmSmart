@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+    <title>Ergot disease in Wheat</title>
+    <link rel="stylesheet" href="/static/css/disease.css">
+</head>
+<body>
+<div class="container-text">
+    <h1>Ergot Disease in Wheat</h1>
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/wheat/ergot_spike.jpg') }}" alt="Ergot disease on wheat spike"
+        style="height:500px;">
+        <p class="caption"> Ergot on wheat spike</p>
+    </div>
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/wheat/ergot_field.jpg') }}" alt="Wheat spikes with ergot disease">
+        <p class="caption"> Wheat spikes infected with ergot</p>
+    </div>
+    <h2>Type</h2>
+    <p><strong>Fungal</strong>: Claviceps purpurea</p>
+
+    <h2>Causes</h2>
+    <p>Ergot disease spreads through spores produced by sclerotia. These spores infect the flowers of host plants.
+        Insects and wind can facilitate the spread of the spores. Once the fungus infects the flowers, it replaces the
+        kernels with sclerotia.</p>
+
+    <h2>Symptoms</h2>
+    <ul>
+        <li>Presence of dark purple to black sclerotia (ergot bodies) in place of the grain kernels.</li>
+        <li>Yellowing and withering of affected spikes.</li>
+        <li>Honeydew-like exudate on flowers, which can be sticky and attract insects.</li>
+    </ul>
+
+    <h2>Prevention and Management</h2>
+    <ul>
+        <li><strong>Crop Rotation:</strong> Rotating with non-host crops to break the lifecycle of the fungus.</li>
+        <li><strong>Seed Cleaning:</strong> Using clean, certified seeds to prevent the introduction of sclerotia.</li>
+        <li><strong>Resistant Varieties:</strong> Growing varieties that are less susceptible to Ergot infection.</li>
+        <li><strong>Fungicide Applications:</strong> Applying fungicides during the flowering period can reduce the infection rate.</li>
+        <li><strong>Field Sanitation:</strong> Removing and destroying sclerotia from the soil and residues through deep summer
+            ploughing.</li>
+    </ul>
+</div>
+</body>
+
+{% endblock %}

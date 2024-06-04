@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+<script type="text/javascript" src="{{url_for('static', filename='rng.js') }}"></script>
+<h3 class="title is-3">FarmSmart Admin</h3>
+<h4 class="subtitle is-4">
+    Welcome
+</h4>
+
+<div class="column is-4 is-offset-4">
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="notification is-danger">
+                {{ messages[0] }}
+            </div>
+        {% endif %}
+    {% endwith %}
+</div>
+<div class="column is-10 is-offset-1">
+    <h4 class="title is-4">Current Users</h4>
+    <div class="box">
+        {% if current_users %}
+            <div class="field">
+                <table class="table">
+                    <tr>
+                        <th>ID</th>
+                        <th>Email</th>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Role</th>
+                    </tr>
+                    {% for user in current_users %}
+                        <tr>
+                            <td>{{ user.id }}</td>
+                            <td>{{ user.email }}</td>
+                            <td>{{ user.firstname }}</td>
+                            <td>{{ user.lastname }}</td>
+                            <td>{{ user.role }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        {% endif %}
+        <form action="/view_all_users">
+            <div>
+                <button class="button is-info is-centered">View All Users</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="column is-8 is-offset-2" id="test">
+    <h4 class="title is-4">Register Admin</h4>
+    <div class="box">
+    <form action="{{ url_for('users.register') }}" method="POST">
+        <div>
+            <button class="button is-info is-centered" name="register_admin">Register New Admin</button>
+        </div>
+    </form>
+    </div>
+</div>
+{% endblock %}

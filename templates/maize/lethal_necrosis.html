@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+    <title>Lethal Necrosis Disease in Maize</title>
+    <link rel="stylesheet" href="/static/css/disease.css">
+</head>
+<body>
+<div class="container-text">
+    <h1>Lethal Necrosis Disease in Maize</h1>
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/maize/lethal_necrosis.jpg') }}" alt="Lethal Necrosis Disease in Maize">
+        <p class="caption">Lethal Necrosis disease on maize leaf</p>
+    </div>
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/maize/lethal_necrosis_1.jpg') }}" alt="Lethal Necrosis Disease in Maize">
+        <p class="caption">Chlorotic mottling of entire leaf</p>
+    </div>
+
+    <h2>Introduction</h2>
+    <p>Maize Lethal Necrosis (MLN) is a devastating viral disease affecting maize crops. It is caused by the combination
+        of Maize chlorotic mottle virus (MCMV) and any of several Potyviruses, such as Sugarcane mosaic virus (SCMV). MLN leads to severe yield losses and can rapidly devastate maize fields.</p>
+
+    <h2>Causes</h2>
+    <p>MLN is primarily transmitted by insect vectors such as thrips, leafhoppers, and aphids. The viruses can also be spread through contaminated seeds, tools, and mechanical
+        means. The disease is particularly prevalent in regions with continuous maize cultivation and poor vector control.</p>
+
+    <h2>Symptoms</h2>
+    <ul>
+        <li>Chlorotic mottling on leaves, starting from the base of young leaves in the whorl and extending upwards.</li>
+        <li>Necrosis of leaf margins, leading to a drying and death of the leaf tissues.</li>
+        <li>Stunted plant growth and poor ear development.</li>
+        <li>Premature aging and death of the plant.</li>
+    </ul>
+
+    <h2>Management</h2>
+    <ul>
+        <li><strong>Resistant Varieties:</strong> Planting maize varieties that are resistant or tolerant to MLN.</li>
+        <li><strong>Vector Control:</strong> Managing insect vectors through the use of insecticides and integrated pest management (IPM) practices.</li>
+        <li><strong>Seed Health:</strong> Using certified, virus-free seeds to prevent initial infection.</li>
+        <li><strong>Crop Rotation:</strong> Rotating with non-host crops to reduce the virus load in the field.</li>
+        <li><strong>Field Hygiene:</strong> Removing and destroying infected plant residues and volunteer plants to minimize sources of the virus.</li>
+        <li><strong>Surveillance:</strong> Regularly monitoring fields for early detection of symptoms and taking immediate action to control the spread.</li>
+    </ul>
+</div>
+</body>
+
+{% endblock %}

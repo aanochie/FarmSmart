@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+    <title>Fusarium Head Blight in Wheat</title>
+    <link rel="stylesheet" href="/static/css/disease.css">
+</head>
+<body>
+<div class="container-text">
+    <h1>Fusarium Head Blight(Scab) in Wheat</h1>
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/wheat/fusarium_blight.jpg') }}" alt="Fusarium head blight on wheat">
+        <p class="caption">Fusarium head blight symptoms on wheat</p>
+    </div>
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/wheat/blight_partial.jpg') }}" alt="Fusarium head blight on wheat">
+        <p class="caption">Partially bleached heads in field of wheat</p>
+    </div>
+    <h2>Type</h2>
+    <p><strong>Fungal</strong>: Fusarium graminearum</p>
+
+    <h2>Causes</h2>
+    <p>Fusarium Head Blight is primarily spread through spores produced by the fungus, which can be carried by wind
+        or rain splash. The spores infect the flowers and developing kernels, especially under warm and humid conditions.</p>
+
+    <h2>Symptoms</h2>
+    <ul>
+        <li>Bleached spikelets or entire heads, particularly in the middle or upper portions of the spike.</li>
+        <li>Pink or salmon-colored fungal growth on infected spikelets under moist conditions.</li>
+        <li>Shriveled and discolored grains, often referred to as "tombstone" kernels.</li>
+    </ul>
+
+    <h2>Prevention and Management</h2>
+    <ul>
+        <li><strong>Resistant Varieties:</strong> Planting wheat varieties that are resistant or tolerant to FHB.</li>
+        <li><strong>Crop Rotation:</strong> Rotating with non-host crops to reduce inoculum levels in the field.</li>
+        <li><strong>Tillage Practices:</strong> Using tillage to bury crop residues that harbor the fungus.</li>
+        <li><strong>Fungicide Applications:</strong> Applying fungicides at the appropriate growth stages can help reduce infection rates.</li>
+        <li><strong>Monitoring Weather Conditions:</strong> Keeping an eye on weather forecasts and applying fungicides when conditions favor the development of the disease.</li>
+    </ul>
+</div>
+</body>
+
+{% endblock %}

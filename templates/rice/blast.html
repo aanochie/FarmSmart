@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+    <title>Rice Blast</title>
+    <link rel="stylesheet" href="/static/css/disease.css">
+</head>
+<body>
+    <div class="container-text">
+        <h1>Rice Blast</h1>
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='images/rice/blast.jpg') }}" alt="Rice Blast">
+            <p class="caption">A rice crop affected by rice blast</p>
+        </div>
+        <h2>Introduction </h2>
+        <p>Rice Blast is a prevalent and destructive disease affecting rice crops. It can significantly reduce yield and affect the quality of the produce.</p>
+
+        <h2>Causes</h2>
+        <p>Rice Blast is primarily caused by the fungus <strong>Magnaporthe oryzae</strong>. The fungus survives in plant debris and soil, and it can spread rapidly under favorable conditions.</p>
+
+        <h2>Symptoms</h2>
+        <p>Common symptoms of Rice Blast include:</p>
+        <ul>
+            <li>Spots or lesions on leaves and stems that are gray to white in color, often with a dark brown border.</li>
+            <li>Infected grains may have gray, velvety growths.</li>
+            <li>Severe infections can lead to blighted panicles and significant yield loss.</li>
+        </ul>
+
+        <h2>Prevention and Management</h2>
+        <p>Rice Blast is most effectively treated using either of the following pesticides:</p>
+        <ul>
+            <li>2.0g/kg Captan</li>
+            <li>2.0g/kg Carbendazium</li>
+            <li>2.0g/kg Thiram</li>
+            <li>2.0g/kg Tricylazole</li>
+        </ul>
+        <p>Systemic fungicides can also be used to control Rice Blast:</p>
+        <ul>
+            <li>Pyroquilon</li>
+            <li>Tricyclazole</li>
+            <li>Edifenpos</li>
+        </ul>
+        <p>Tricyclazole can be sprayed at 1g/lit of water</p>
+        <p>Epifendos can also be used, sprayed at 1ml/lit of water</p>
+    </div>
+</body>
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+    <title>Wilt of Sugarcane</title>
+    <link rel="stylesheet" href="/static/css/disease.css">
+</head>
+<body>
+    <div class="container-text">
+        <h1>Wilt</h1>
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='images/sugarcane/wilt.jpg') }}" alt="Wilt">
+            <p class="caption">A sugarcane crop affected by Wilt</p>
+        </div>
+        <h2>Introduction </h2>
+        <p>Wilt is a disease affecting sugarcane crops which is visible in canes of 4 to 5 months age.</p>
+
+        <h2>Causes</h2>
+        <p>Wilt is caused by the fungus <strong>Fusarium moniliforme</strong>. The fungus can survive in soil and on infected plant debris, and can spread rapidly under favorable conditions.</p>
+
+        <h2>Symptoms</h2>
+        <p>Common symptoms of Wilt include:</p>
+        <ul>
+            <li>Yellowing and wilting of leaves.</li>
+            <li>Severe infections can lead to death of the plant.</li>
+        </ul>
+
+        <h2>Prevention and Management</h2>
+        <p>Effective management of Wilt involves a combination of cultural practices, resistant varieties, and fungicide applications. Here are some strategies:</p>
+        <ul>
+            <li>Rotate crops to reduce the buildup of fungal spores in the soil.</li>
+            <li>Plant resistant varieties of sugarcane.</li>
+            <li>Apply fungicides as a preventive measure, especially during favorable conditions for the disease.</li>
+            <li>Ensure proper spacing between plants to improve air circulation.</li>
+            <li>Remove and destroy infected plant debris after harvest.</li>
+        </ul>
+    </div>
+</body>
+
+{% endblock %}

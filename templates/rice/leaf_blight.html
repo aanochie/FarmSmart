@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+    <title>Bacterial Leaf Blight of Rice</title>
+    <link rel="stylesheet" href="/static/css/disease.css">
+</head>
+<body>
+    <div class="container-text">
+        <h1>Bacterial Leaf Blight</h1>
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='images/rice/blight.png') }}" alt="Bacterial Leaf Blight">
+            <p class="caption">A rice crop affected by bacterial leaf blight</p>
+        </div>
+        <h2>Introduction </h2>
+        <p>Bacterial Leaf Blight, also known as Bacterial Blight, is a serious disease affecting rice crops. It is most present in leaves of middle to upper canopy. A rice crop infected show small water-soaked areas, which gradually become yellow, then brown, killing the plant.</p>
+
+        <h2>Causes</h2>
+        <p>Bacterial Leaf Blight is caused by the bacterium <strong>Xanthomonas oryzae pv. oryzae</strong>. The bacteria can survive in crop residues, seeds, and soil, and can spread rapidly under favorable conditions.</p>
+
+        <h2>Symptoms</h2>
+        <p>Common symptoms of Bacterial Leaf Blight include:</p>
+        <ul>
+            <li>Yellow to orange leaf lesions that expand and coalesce, leading to blighted leaves.</li>
+            <li>Infected grains may have a milky appearance.</li>
+            <li>Severe infections can lead to significant yield loss.</li>
+        </ul>
+
+        <h2>Prevention and Management</h2>
+        <p>Effective management of Bacterial Leaf Blight involves a combination of cultural practices, resistant varieties, and bactericide applications. Here are some strategies:</p>
+        <ul>
+            <li>Rotate crops to reduce the buildup of bacteria in the soil.</li>
+            <li>Plant resistant varieties of rice.</li>
+            <li>Apply bactericides as a preventive measure, especially during favorable conditions for the disease.</li>
+            <li>Ensure proper spacing between plants to improve air circulation.</li>
+            <li>Remove and destroy infected plant debris after harvest.</li>
+        </ul>
+    </div>
+</body>
+
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+    <title>Rice Foot Rot</title>
+    <link rel="stylesheet" href="/static/css/disease.css">
+</head>
+<body>
+    <div class="container-text">
+        <h1>Rice Foot Rot</h1>
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='images/rice/foot_rot.jpg') }}" alt="Rice Foot Rot">
+            <p class="caption">A rice crop affected by rice foot rot</p>
+        </div>
+        <h2>Introduction </h2>
+        <p>Rice Foot Rot, also known as Bakanae disease, is a fungal disease affecting rice crops. Typically, grains are discoloured. The severity of infection is heavily dependent on season.</p>
+
+        <h2>Causes</h2>
+        <p>Rice Foot Rot is caused by the fungus Fusarium fujikuroi. The fungus can survive in soil and on infected plant debris, and can spread rapidly under favorable conditions.</p>
+
+        <h2>Symptoms</h2>
+        <p>Common symptoms of Rice Foot Rot include:</p>
+        <ul>
+            <li>Abnormally tall plants with thin stems and few tillers.</li>
+            <li>Infected grains may be discolored or empty.</li>
+            <li>Severe infections can lead to significant yield loss.</li>
+        </ul>
+
+        <h2>Prevention and Management</h2>
+        <p>Effective prevention of Rice Foot Rot involves good crop hygiene practice and chemical treatment:</p>
+        <ul>
+            <li>Clean seeds should be used to minimise the occurrence of Rice Foot Rot</li>
+            <li>Application of Thiram</li>
+            <li>Use of resistant varieties of rice</li>
+            <li>Proper field drainage</li>
+        </ul>
+        <p>Infected rice crops can be treated using fungicides:</p>
+        <ul>
+            <li>Hexaconazole at 2ml/lit of water</li>
+            <li>Thiphanata Methyl 1.0g/lit of water</li>
+        </ul>
+    </div>
+</body>
+
+{% endblock %}

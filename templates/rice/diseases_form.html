@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select disease</title>
+    <link rel="stylesheet" href="/static/css/disease_form.css">
+</head>
+<body>
+    <h1>Rice</h1>
+    <h2>Select Disease</h2>
+    <form method="POST">
+        <div class="image-option">
+            <input type="submit" id="image1" name="disease" value="blast">
+            <label for="image1">
+                <img src="{{ url_for('static', filename='images/rice/blast.jpg') }}" alt="Rice Blast">
+            </label>
+            <h3> Blast</h3>
+        </div>
+        <div class="image-option">
+            <input type="submit" id="image2" name="disease" value="leaf-blight">
+            <label for="image2">
+                <img src="{{ url_for('static', filename='images/rice/blight.png') }}" alt="Blight infected leaf">
+            </label>
+            <h3> Leaf Blight</h3>
+        </div>
+        <div class="image-option">
+            <input type="submit" id="image3" name="disease" value="sheath-blight">
+            <label for="image3">
+                <img src="{{ url_for('static', filename='images/rice/sheath_blight.jpg') }}" alt="Sheath Blight">
+            </label>
+            <h3> Sheath Blight</h3>
+        </div>
+        <div class="image-option">
+            <input type="submit" id="image4" name="disease" value="foot-rot">
+            <label for="image4">
+                <img src="{{ url_for('static', filename='images/rice/foot_rot.jpg') }}" alt="Rice Foot Rot">
+            </label>
+            <h3> Foot Rot</h3>
+        </div>
+        <div class="image-option">
+            <input type="submit" id="image5" name="disease" value="brown-stripe">
+            <label for="image5">
+                <img src="{{ url_for('static', filename='images/rice/brown_stripe.jpg') }}" alt="Brown Stripe">
+            </label>
+            <h3> Brown Stipe</h3>
+        </div>
+    </form>
+</body>
+{% endblock %}

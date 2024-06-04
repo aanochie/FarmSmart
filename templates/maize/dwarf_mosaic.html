@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+    <title>Dwarf Mosaic Potyvirus in Maize</title>
+    <link rel="stylesheet" href="/static/css/disease.css">
+</head>
+<body>
+<div class="container-text">
+    <h1>Dwarf Mosaic Potyvirus Disease in Maize</h1>
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/maize/dwarf_mosaic.jpg') }}" alt="Dwarf Mosaic Potyvirus in Maize">
+        <p class="caption">Dwarf Mosaic Potyvirus disease on maize leaf</p>
+    </div>
+    <h2>Introduction</h2>
+    <p>Dwarf Mosaic is a viral disease that affects maize, caused by the Maize Dwarf Mosaic Virus (MDMV). It is one
+        of the most common and destructive viral diseases of maize, leading to significant yield losses and stunted growth in infected plants.</p>
+
+    <h2>Causes</h2>
+    <p>MDMV is primarily spread by aphids, which transmit the virus as they feed on the sap of infected plants.
+        The virus can also be transmitted through infected seed and by mechanical means.</p>
+
+    <h2>Symptoms</h2>
+    <ul>
+        <li>Mosaic patterns of light and dark green or yellow on leaves.</li>
+        <li>Streaking and mottling of leaf tissues.</li>
+        <li>Stunted plant growth and reduced vigor.</li>
+        <li>Malformed ears and poor grain development.</li>
+    </ul>
+
+    <h2>Management</h2>
+    <ul>
+        <li><strong>Resistant Varieties:</strong> Planting maize varieties that are resistant to MDMV.</li>
+        <li><strong>Aphid Control:</strong> Managing aphid populations through the use of insecticides and biological control methods.</li>
+        <li><strong>Field Hygiene:</strong> Removing and destroying infected plant residues to reduce sources of the virus.</li>
+        <li><strong>Crop Rotation:</strong> Rotating with non-host crops to break the disease cycle.</li>
+        <li><strong>Planting Date Adjustment:</strong> Planting early to avoid peak aphid activity.</li>
+    </ul>
+
+</div>
+</body>
+
+{% endblock %}

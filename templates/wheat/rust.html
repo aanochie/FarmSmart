@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+    <title>Rusts in Wheat</title>
+    <link rel="stylesheet" href="/static/css/disease.css">
+</head>
+<body>
+<div class="container-text">
+    <h1>Rusts in Wheat</h1>
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/wheat/stem_rust.jpg') }}" alt="Rust on wheat stem">
+        <p class="caption">Rust on wheat stems</p>
+    </div>
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/wheat/rust_on_leaves.jpg') }}" alt="Rust on wheat stem">
+        <p class="caption">Rust on wheat leaf</p>
+    </div>
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/wheat/rust_on_spike.jpg') }}" alt="Stripe rust on wheat spike">
+        <p class="caption">Stripe rust on wheat spike</p>
+    </div>
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/wheat/rust_stripe.jpg') }}" alt="Stripe rust on wheat leaf">
+        <p class="caption">Stripe rust on wheat leaf</p>
+    </div>
+    <h2>Type</h2>
+    <p>Fungal:</p>
+    <p><strong>Stem rust</strong>: Puccinia graminis</p>
+    <p><strong>Leaf rust</strong>: Puccinia triticina</p>
+    <p><strong>Stripe rust</strong>: Puccinia striiformis</p>
+
+    <h2>Causes</h2>
+    <p>Rust fungi produce spores that are easily dispersed by wind, allowing them to spread over long distances.
+        The spores infect wheat plants under favorable conditions, particularly during periods of high humidity and moderate temperatures.</p>
+
+    <h2>Symptoms</h2>
+    <ul>
+        <li><strong>Leaf Rust:</strong> Small, orange-red pustules on leaves and leaf sheaths.</li>
+        <li><strong>Stem Rust:</strong> Large, reddish-brown pustules on stems, leaves, and sometimes spikes.</li>
+        <li><strong>Stripe Rust:</strong> Yellow-orange pustules that form stripes along the length of leaves.</li>
+    </ul>
+    <h2>Management</h2>
+    <ul>
+        <li><strong>Resistant Varieties:</strong> Planting wheat varieties that are resistant to different types of rust.</li>
+        <li><strong>Fungicide Applications:</strong> Applying fungicides at the appropriate growth stages can help control rust outbreaks.</li>
+        <li><strong>Crop Rotation:</strong> Rotating with non-host crops to break the disease cycle.</li>
+        <li><strong>Monitoring and Forecasting:</strong> Regularly monitoring fields and using disease forecasting models to predict and manage outbreaks.</li>
+        <li><strong>Field Sanitation:</strong> Removing and destroying volunteer wheat and other grass hosts that can harbor rust fungi.</li>
+    </ul>
+</div>
+</body>
+
+{% endblock %}

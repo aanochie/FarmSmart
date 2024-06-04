@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select disease</title>
+    <link rel="stylesheet" href="/static/css/disease_form.css">
+</head>
+<body>
+    <h1>Wheat</h1>
+    <h2>Select Disease</h2>
+    <form method="POST">
+        <div class="image-option">
+            <input type="submit" id="image1" name="disease" value="blight">
+            <label for="image1">
+                <img src="{{ url_for('static', filename='images/wheat/fusarium_blight.jpg') }}" alt="Fusarium Head Blight">
+            </label>
+            <h3> Fusarium Head Blight</h3>
+        </div>
+        <div class="image-option">
+            <input type="submit" id="image2" name="disease" value="rust">
+            <label for="image2">
+                <img src="{{ url_for('static', filename='images/wheat/stem_rust.jpg') }}" alt="Leaf Rust">
+            </label>
+            <h3> Rust diseases</h3>
+        </div>
+        <div class="image-option">
+            <input type="submit" id="image3" name="disease" value="powdery-mildew">
+            <label for="image3">
+                <img src="{{ url_for('static', filename='images/wheat/powdery_mildew_field.png') }}" alt="Powdery Mildew">
+            </label>
+            <h3> Powdery Mildew</h3>
+        </div>
+        <div class="image-option">
+            <input type="submit" id="image4" name="disease" value="barley">
+            <label for="image4">
+                <img src="{{ url_for('static', filename='images/wheat/byd_field.jpg') }}" alt="Barley Yellow dwarf">
+            </label>
+            <h3> Barley Yellow Dwarf</h3>
+        </div>
+        <div class="image-option">
+            <input type="submit" id="image5" name="disease" value="tan-spot">
+            <label for="image5">
+                <img src="{{ url_for('static', filename='images/wheat/tan_spot.jpg') }}" alt="Tan Spot on wheat leaves">
+            </label>
+            <h3> Tan Spot</h3>
+        </div>
+        <div class="image-option">
+            <input type="submit" id="image6" name="disease" value="ergot">
+            <label for="image6">
+                <img src="{{ url_for('static', filename='images/wheat/ergot_spike.jpg') }}" alt="Ergot on wheat spike">
+            </label>
+            <h3> Ergot</h3>
+        </div>
+    </form>
+</body>
+{% endblock %}

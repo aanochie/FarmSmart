@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+    <title>Tan Spot in Wheat</title>
+    <link rel="stylesheet" href="/static/css/disease.css">
+</head>
+<body>
+<div class="container-text">
+    <h1>Tan Spot in Wheat</h1>
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/wheat/tan_spot.jpg') }}" alt="Tan Spot on wheat leaves">
+        <p class="caption">Wheat leaf showing sympotoms of tan spot</p>
+    </div>
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/wheat/tan_spot_leaf.jpg') }}" alt="Tan Spot on wheat leaf">
+        <p class="caption">Tan spot lesion on wheat leaf</p>
+    </div>
+    <h2>Type</h2>
+    <p><strong>Fungal</strong>: Pyrenophora tritici-repentis</p>
+
+    <h2>Causes</h2>
+    <p>Tan Spot is primarily spread through infected crop residues and spores that can be dispersed by wind and rain.
+        The fungus overwinters in crop residues and can infect new wheat plants in the following growing season.</p>
+    <h2>Symptoms</h2>
+    <ul>
+        <li>Small, tan-colored spots that enlarge and form oval lesions with yellow halos.</li>
+        <li>Lesions that can coalesce, leading to large, dead areas on the leaves.</li>
+        <li>Premature leaf senescence, reducing photosynthetic capacity and grain fill.</li>
+    </ul>
+
+    <h2>Management</h2>
+    <ul>
+        <li><strong>Resistant Varieties:</strong> Planting wheat varieties that are resistant or tolerant to Tan Spot.</li>
+        <li><strong>Crop Rotation:</strong> Rotating with non-host crops to reduce the amount of inoculum in the field.</li>
+        <li><strong>Tillage Practices:</strong> Using tillage to bury crop residues can help reduce the inoculum levels.</li>
+        <li><strong>Fungicide Applications:</strong> Applying fungicides at the flag leaf stage can help protect against severe infections.</li>
+        <li><strong>Field Sanitation:</strong> Removing and destroying infected residues to reduce the source of the fungus.</li>
+    </ul>
+</div>
+</body>
+
+{% endblock %}

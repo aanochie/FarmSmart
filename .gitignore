@@ -1,0 +1,5 @@
+.idea/
+__pycache__/
+quiz/__pycache__/
+venv/
+search/__pycache__/

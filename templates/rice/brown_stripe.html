@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+    <title>Brown Stripe in Rice</title>
+    <link rel="stylesheet" href="/static/css/disease.css">
+</head>
+<body>
+    <div class="container-text">
+        <h1>Brown Stripe</h1>
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='images/rice/brown_stripe.jpg') }}" alt="Brown Stripe">
+            <p class="caption">A rice crop affected by brown stripe</p>
+        </div>
+        <h2>Introduction </h2>
+        <p>Brown Stripe is a disease affecting the seedlings of rice. It is distinguished by a brown stripe on the leaf in alongside curving of the leaf. Infected crops exhibit browning and drying of grain weight.</p>
+
+        <h2>Causes</h2>
+        <p>Brown Stripe is caused by the fungus <strong>Drechslera oryzae</strong>. The fungus can survive in soil and on infected plant debris, and can spread rapidly under favorable conditions.</p>
+
+        <h2>Symptoms</h2>
+        <p>Common symptoms of Brown Stripe include:</p>
+        <ul>
+            <li>Yellow to brown stripes on leaves and sheaths.</li>
+            <li>Infected grains may be discolored or empty.</li>
+            <li>Severe infections can lead to significant yield loss.</li>
+        </ul>
+
+        <h2>Prevention and Management</h2>
+        <p>Brown Stripe can easily be managed with common practices involving:</p>
+        <ul>
+            <li>Field hygeine</li>
+            <li>Plowing under rice stubble, straw and seedlings which may be infected</li>
+            <li>Provide a balanced amount of nutrients, especially Nitrogen</li>
+        </ul>
+        <p>More specifically, Brown Strip can be treated using hot water:</p>
+        <ul>
+            <li>Soak seeds in hot water at 52°C for 10 minutes</li>
+            <li>Drain and dry seeds before planting</li>
+        </ul>
+    </div>
+</body>
+
+{% endblock %}

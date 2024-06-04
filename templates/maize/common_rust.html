@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+    <title>Common Rust in Maize</title>
+    <link rel="stylesheet" href="/static/css/disease.css">
+</head>
+<body>
+    <div class="container-text">
+        <h1>Common Rust Disease in Maize</h1>
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='images/maize/common_rust.jpeg') }}" alt="Common Rust in Maize">
+            <p class="caption">Common Rust disease on maize leaf</p>
+        </div>
+
+        <h2>Introduction</h2>
+        <p>Common Rust is a widespread fungal disease affecting maize (corn). It is caused by the fungus
+            <em>Puccinia sorghi</em>. This disease can cause significant yield losses if not managed properly,
+            particularly in susceptible maize varieties.</p>
+
+        <h2>Causes</h2>
+        <p>Common Rust is spread by windborne spores. The fungus requires living host tissue to survive and can spread
+            rapidly under favorable conditions of cool temperatures and high humidity.</p>
+
+        <h2>Symptoms</h2>
+        <ul>
+            <li>Small, round to oval pustules on both leaf surfaces, initially pale green to yellow and turning reddish-brown.</li>
+            <li>Pustules that release reddish-brown spores, which can rub off on hands and clothes.</li>
+            <li>Severe infections that cause leaves to yellow and die prematurely, reducing photosynthetic area and plant vigor.</li>
+        </ul>
+
+        <h2>Management</h2>
+        <ul>
+            <li><strong>Resistant Varieties:</strong> Planting maize varieties that are resistant to Common Rust.</li>
+            <li><strong>Fungicide Applications:</strong> Applying fungicides when the disease is first detected can help control its spread.</li>
+            <li><strong>Cultural Practices:</strong> Practices such as crop rotation and maintaining good field hygiene can reduce disease pressure.</li>
+            <li><strong>Monitoring and Forecasting:</strong> Regularly monitoring fields for early signs of infection and using disease forecasting models to predict outbreaks.</li>
+        </ul>
+    </div>
+</body>
+
+{% endblock %}

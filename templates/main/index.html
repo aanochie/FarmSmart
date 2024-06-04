@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block content %}
+<title>CSC2033</title>
+
+<video id="video-background" autoplay loop muted poster="/static/images/Home-FarmSmart-Video.mp4">
+  <source src="/static/images/Home-FarmSmart-Video.mp4" type="video/mp4"> <!Place video on index page>
+</video>
+
+<h1 class="title">FARM<span style="color:#9579ea;">SMART</span></h1> <!Two colour lettering for FarmSmart Title>
+
+    <h2 class="subtitle" style="text-align: left; color: white; font-size: 40px;">
+        CSC2033 Software Engineering Team Project
+    </h2>
+
+    <div style="color: white; text-align: left;"> <!Introductory text to welcome user to program>
+        <p>Welcome to FarmSmart, your interactive solution for agricultural awareness. FarmSmart integrates quiz technology to spread awareness and support of UN Sustainable Development Goal of Zero Hunger</p>
+
+        <p>Please visit: <a href="https://sdgs.un.org/goals/goal2">Zero Hunger UN</a> for further information regarding Zero Hunger</p>
+
+        <p>Join us on this journey towards a smarter, more efficient future in agriculture!</p>
+    </div>
+
+    <div style="text-align: left; margin-top: 30px ">
+        <a href="{{ url_for('quiz.quiz') }}" class="button is-primary is-medium" style="background-color: #5E17EB; color: white; border-color: transparent;">Play Our Quiz</a>
+        <! Purple action Button leading to login page >
+    </div>
+
+<style>
+    #video-background { /*Ensures video background covers entire page correctly*/
+        height: 100vh !important;
+        width: 100vw !important;;
+        object-fit: cover;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    div{
+        margin-bottom: 2px !important;
+        font-size: 20px !important;
+
+    }
+    h1{
+        text-align: left;
+        color: white !important;
+        font-size: 90px !important;
+    }
+    h2{
+        text-align: left;
+        color: white !important;
+        font-size: 40px !important;
+    }
+
+
+    body{
+        margin: 0 !important;
+        background: url("/static/images/Home-FarmSmart-Video.mp4") !important; /*Sets video as background*/
+        background-size: cover !important;
+
+        }
+    }
+
+</style>
+</head>
+<body>
+
+</body>
+</html>
+<div style="text-align: left; margin-top: 10px ">
+    <p><span style="color:white;">Team 2</span> </p>
+
+</div>
+
+{% endblock %}

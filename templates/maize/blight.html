@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+    <title>Blight Disease in Maize</title>
+    <link rel="stylesheet" href="/static/css/disease.css">
+</head>
+<body>
+    <div class="container-text">
+        <h1>Blight Disease in Maize</h1>
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='images/maize/corn_leaf_blight.jpeg') }}" alt="Blight disease in maize">
+            <p class="caption">Blight disease affecting a maize crop.</p>
+            <img src="{{ url_for('static', filename='images/maize/northern_blight.jpg') }}" alt="Northern Blight disease in maize">
+            <p class="caption">Northern Blight disease affecting a maize leaf.</p>
+        </div>
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='images/maize/southern_blight.jpg') }}" alt="Southern Blight disease in maize">
+            <p class="caption">Southern Blight disease symptoms on maize.</p>
+        </div>
+        <h2>Introduction </h2>
+        <p>Blight disease is a common and destructive disease affecting maize crops. It can significantly reduce yield and affect the quality of the produce.</p>
+
+        <h2>Causes</h2>
+        <p>Blight disease in maize is primarily caused by fungal pathogens. The most common pathogens include:</p>
+        <ul>
+            <li><strong>Exserohilum turcicum</strong>: Causes northern corn leaf blight.</li>
+            <li><strong>Bipolaris maydis</strong>: Causes southern corn leaf blight.</li>
+        </ul>
+
+        <h2>Symptoms</h2>
+        <p>Common symptoms of blight disease in maize include:</p>
+        <ul>
+            <li>Lesions on leaves that are oval or cigar-shaped.</li>
+            <li>Yellowing and browning of leaves.</li>
+            <li>Premature death of leaves.</li>
+            <li>Reduced kernel size and quality.</li>
+        </ul>
+
+        <h2>Prevention and Management</h2>
+        <p>Effective management of blight disease involves a combination of cultural practices, resistant varieties, and fungicide applications. Here are some strategies:</p>
+        <ul>
+            <li>Rotate crops to reduce the buildup of fungal spores in the soil.</li>
+            <li>Plant resistant varieties of maize.</li>
+            <li>Apply fungicides as a preventive measure, especially during favorable conditions for the disease.</li>
+            <li>Ensure proper spacing between plants to improve air circulation.</li>
+            <li>Remove and destroy infected plant debris after harvest.</li>
+        </ul>
+    </div>
+</body>
+
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Regional Maps</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #map-selection {
+            margin-bottom: 20px;
+        }
+        #map-container {
+            width: 100%;
+            height: auto;
+        }
+        #map-image {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var selector = document.getElementById('region-selector');
+            var mapImage = document.getElementById('map-image');
+            var imageBaseUrl = "{{ image_base_url }}";
+
+            selector.addEventListener('change', function() {
+                var selectedMap = selector.value;
+                mapImage.src = imageBaseUrl + selectedMap;
+            });
+        };
+    </script>
+</head>
+<body>
+    <h1>Regional Maps</h1>
+    <p>Select a region to view the map:</p>
+
+    <!-- The following code is used to generate the dropdown list of regional maps -->
+    <div id="map-selection">
+        <select id="region-selector">
+            <option value="ALC map.jpg">Overview</option>
+            <option value="east-midlands-map.jpg">East Midlands</option>
+            <option value="north-west-lands.jpg">north-west-lands</option>
+            <option value="west-mid-lands.jpg">west-mid-lands</option>
+            <option value="Yorkshire & The Humber.jpg">Yorkshire & The Humber</option>
+            <option value="north-east-lands.jpg">North East</option>
+            <option value="London & south-east-lands.jpg">London & South East</option>
+            <option value="east-lands.jpg">east-lands</option>
+        </select>
+    </div>
+    <div id="map-container">
+        <img id="map-image" src="{{ image_base_url }}ALC map.jpg" alt="Overview Map">
+    </div>
+</body>
+</html>
+{% endblock %}

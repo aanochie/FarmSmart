@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+    <title>Gummosis of Sugarcane</title>
+    <link rel="stylesheet" href="/static/css/disease.css">
+</head>
+<body>
+    <div class="container-text">
+        <h1>Gummosis</h1>
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='images/sugarcane/gummosis.jpg') }}" alt="Gummosis"
+            style="height:292px">
+            <p class="caption">A sugarcane crop affected by Gummosis</p>
+        </div>
+        <h2>Introduction </h2>
+        <p>Gummosis is a common disease of sugarcane which can greatly damage the crop. It is signified by longitudinal yellow streaks, which brown as the plant matures.</p>
+
+        <h2>Causes</h2>
+        <p>Gummosis is caused by the bacterium <strong>Xanthomonas axonopodis</strong>. The bacterium can survive in soil and on infected plant debris, and can spread rapidly under favorable conditions.</p>
+
+        <h2>Symptoms</h2>
+        <p>Common symptoms of Gummosis include:</p>
+        <ul>
+            <li>Yellowing and wilting of leaves.</li>
+            <li>Exudation of a gummy substance from the stalks.</li>
+            <li>Severe infections can lead to death of the plant.</li>
+        </ul>
+
+        <h2>Prevention and Management</h2>
+        <p>Effective management of Gummosis involves a combination of cultural practices, resistant varieties, and bactericide applications. Here are some strategies:</p>
+        <ul>
+            <li>Rotate crops to reduce the buildup of bacterial cells in the soil.</li>
+            <li>Plant resistant varieties of sugarcane.</li>
+            <li>Apply bactericides as a preventive measure, especially during favorable conditions for the disease.</li>
+            <li>Ensure proper spacing between plants to improve air circulation.</li>
+            <li>Remove and destroy infected plant debris after harvest.</li>
+        </ul>
+    </div>
+</body>
+
+{% endblock %}

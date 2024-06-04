@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+
+    body{
+        margin: 0 !important;
+        background-image: url("static/images/Agriculture-Background.png") !important; /*Sets background as image*/
+        background-size: cover; /*Ensures background fills entire page */
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        }
+</style>
+<body>
+  <div class="panel" style="scale: 0.8; position: relative; top: -100px">
+    <img src="static/images/Quiz-Logo.png" alt="QuizLogo" class="panel-image">
+  </div>
+  <div class="column is-10 is-offset-1">
+
+  <div class="box" style="position: relative; top: -200px">
+    <div id="quiz"></div>
+      {% if error%}
+        <p style="font-size:20px;">{{ error }}</p>
+      {% endif %}
+      {% if form %}
+      <form method="post">
+        <p style="font-size:40px;">{{ form.Question }}</p>
+      </form>
+      <form method="POST" action="/results">
+        <INPUT TYPE="Radio" Name="Answer" Value=Real>{{ form.Real_Answer }}
+        <INPUT TYPE="Radio" Name="Answer" Value=Fake1>{{form.Fake_Answer_1}}
+        <INPUT TYPE="Radio" Name="Answer" Value=Fake2>{{form.Fake_Answer_2}}
+        <INPUT TYPE="Radio" Name="Answer" Value=Fake3>{{form.Fake_Answer_3}}
+        <div>
+        <button class="button is-info is-centered">Submit</button>
+        </div>
+      </form>
+      {% endif %}
+      {% if results %}
+        {% if success %}
+          <p style="font-size:40px;">CORRECT</p>
+        {% endif %}
+        {% if not success %}
+        <p style="font-size:40px;">INCORRECT</p>
+          <form method="POST" action="/retry">
+          <div>
+          <button class="button is-info is-centered">Retry Question</button>
+          </div>
+          </form>
+        {% endif %}
+        <form method="POST" action="/new">
+        <div>
+        <button class="button is-info is-centered">Try New Question</button>
+        </div>
+        </form>
+      {% endif %}
+  </div>
+  </div>
+  <script src="quiz/views.py"></script>
+</body>
+
+{% endblock %}

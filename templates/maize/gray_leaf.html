@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+    <title>Gray Leaf Spot in Maize</title>
+    <link rel="stylesheet" href="/static/css/disease.css">
+</head>
+<body>
+<div class="container-text">
+    <h1>Gray Leaf Spot Disease in Maize</h1>
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/maize/gray_leaf_spot_1.jpeg') }}" alt="Gray Leaf Spot in Maize">
+        <p class="caption">Gray Leaf Spot disease on maize leaf</p>
+        <img src="{{ url_for('static', filename='images/maize/gray_leaf_spot_severe.jpeg') }}" alt="Gray Leaf Spot in Maize">
+        <p class="caption">Severe symptoms of Gray Leaf Spot disease on maize leaf</p>
+        <img src="{{ url_for('static', filename='images/maize/gray_leaf_spot_backlit.jpeg') }}" alt="Gray Leaf Spot in Maize">
+        <p class="caption">Back lit Gray Leaf Spot disease on maize leaf</p>
+    </div>
+
+    <h2>Introduction</h2>
+    <p>Gray Leaf Spot is a significant fungal disease affecting maize, caused by the pathogen <em>Cercospora zeae-maydis</em>.
+        The disease can lead to substantial yield losses, particularly in areas with warm, humid conditions.</p>
+
+    <h2>Causes</h2>
+    <p>The Gray Leaf Spot pathogen spreads via wind and rain-splashed spores. It can survive on crop residues,
+        making it important to manage debris to reduce inoculum levels.</p>
+
+    <h2>Symptoms</h2>
+    <ul>
+        <li>Small, rectangular, tan to gray lesions on the leaves, often with a yellow halo.</li>
+        <li>Lesions that expand and merge, covering large areas of leaf tissue.</li>
+        <li>Premature leaf senescence and reduced photosynthetic capacity, leading to stunted growth and lower yields.</li>
+    </ul>
+
+    <h2>Management</h2>
+    <ul>
+        <li><strong>Resistant Varieties:</strong> Planting maize hybrids that are resistant or tolerant to Gray Leaf Spot.</li>
+        <li><strong>Crop Rotation:</strong> Rotating with non-host crops to reduce the pathogen load in the field.</li>
+        <li><strong>Field Hygiene:</strong> Removing and destroying infected crop residues to minimize sources of the pathogen.</li>
+        <li><strong>Fungicide Applications:</strong> Using fungicides as a preventive measure or at the first sign of disease can help control its spread.</li>
+        <li><strong>Optimal Planting Practices:</strong> Ensuring good plant spacing and adequate airflow to reduce humidity around plants.</li>
+    </ul>
+</div>
+</body>
+
+{% endblock %}

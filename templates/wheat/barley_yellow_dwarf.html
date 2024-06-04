@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+    <title>Barley Yellow Dwarf in Wheat</title>
+    <link rel="stylesheet" href="/static/css/disease.css">
+</head>
+<body>
+<div class="container-text">
+    <h1>Barley Yellow Dwarf Virus in Wheat</h1>
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/wheat/byd_field.jpg') }}" alt="Barley Yellow dwarf on wheat">
+        <p class="caption">Yellow leaves on wheat infected with Barley Yellow dwarf</p>
+    </div>
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/wheat/byd_purple.jpg') }}" alt="Purple leaves due to byd">
+        <p class="caption">Purple leaves on wheat infected with Barley Yellow Dwarf</p>
+    </div>
+    <h2>Type</h2>
+    <p><strong>Viral</strong>: Barley Yellow Dwarf Virus</p>
+
+    <h2>Causes</h2>
+    <p>Barley Yellow Dwarf Virus is primarily transmitted by several species of aphids, including the oat bird-cherry aphid and the
+        English grain aphid. These insects acquire the virus by feeding on infected plants and can transmit it
+        to healthy plants as they move and feed.</p>
+
+    <h2>Symptoms</h2>
+    <ul>
+        <li>Yellowing, reddening of the leaf tips and margins, starting from the older leaves and progressing to the younger leaves.</li>
+        <li>Stunted growth and reduced tillering.</li>
+        <li>Delayed heading and maturity.</li>
+        <li>Leaves may be red, purple, orange, green or brown</li>
+        <li>Reduced root growth and poor root system development.</li>
+    </ul>
+
+    <h2>Management</h2>
+    <ul>
+        <li><strong>Resistant Varieties:</strong> Planting wheat varieties that are resistant or tolerant to BYDV.</li>
+        <li><strong>Aphid Control:</strong> Monitoring aphid populations and applying insecticides when necessary to control their numbers.</li>
+        <li><strong>Early Planting:</strong> Planting wheat early in the season to avoid peak aphid activity.</li>
+        <li><strong>Crop Rotation:</strong> Rotating crops to reduce the prevalence of aphid vectors.</li>
+    </ul>
+</div>
+</body>
+
+{% endblock %}

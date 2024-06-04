@@ -1,0 +1,50 @@
+.image-option {
+    display: flex;
+    margin: 10px;
+}
+
+.image-option input {
+    display: none;
+}
+
+.image-option img:hover {
+    transform: scale(1.025);
+    border-color: black;
+    border-width: 3px;
+}
+
+.image-option label {
+    cursor: pointer;
+}
+
+.image-option img {
+    width: 300px;
+    height: 300px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: border-color 0.3s;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.image-option h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.image-option h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+.image-option h3 {
+    font-size: 21px;
+    font-weight: bold;
+}

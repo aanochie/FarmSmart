@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+    <title>Smut of Sugarcane</title>
+    <link rel="stylesheet" href="/static/css/disease.css">
+</head>
+<body>
+    <div class="container-text">
+        <h1>Smut</h1>
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='images/sugarcane/smut.jpg') }}" alt="Smut"
+            style="height:292px">
+            <p class="caption">A sugarcane crop affected by Smut</p>
+        </div>
+        <h2>Introduction </h2>
+        <p>Smut is a widely spread disease affeceting sugarcane, which results in significant reduction of cane quality and quantity.</p>
+
+        <h2>Causes</h2>
+        <p>Smut is caused by the fungus <strong>Sporisorium scitamineum</strong>. The fungus can survive in soil and on infected plant debris, and can spread rapidly under favorable conditions.</p>
+
+        <h2>Symptoms</h2>
+        <p>Common symptoms of Smut include:</p>
+        <ul>
+            <li>Black, whip-like structures growing from the top of the plant.</li>
+            <li>Severe infections can lead to death of the plant.</li>
+        </ul>
+
+        <h2>Prevention and Management</h2>
+        <p>Effective management of Smut involves a combination of cultural practices, resistant varieties, and fungicide applications. Here are some strategies:</p>
+        <ul>
+            <li>Rotate crops to reduce the buildup of fungal spores in the soil.</li>
+            <li>Plant resistant varieties of sugarcane.</li>
+            <li>Apply fungicides as a preventive measure, especially during favorable conditions for the disease.</li>
+            <li>Ensure proper spacing between plants to improve air circulation.</li>
+            <li>Remove and destroy infected plant debris after harvest.</li>
+        </ul>
+    </div>
+</body>
+
+{% endblock %}

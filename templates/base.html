@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image" href="/static/images/logo.png">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSC2033</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <style>
+        .navbar {
+            opacity: 90%;
+            background-color: #272727 !important; /*Black background*/
+            height: 100px;
+        }
+        .navbar-brand .navbar-item img {
+            scale: 2.5 !important; /*set size*/
+        }
+        .navbar-item {
+            color: white !important; /*White text colour for readability*/
+        }
+        .navbar-item:hover {
+            color: #5e17eb !important; /*Purple hover effect*/
+            background-color: #272727 !important;
+        }
+        .login-button {
+            background-color: #5e17eb !important; /*Purple background*/
+            color: white !important; /*White text */
+            border: 20px solid #272727 !important; /*Black border */
+            border-radius: 30px !important; /*Rounded corners*/
+            padding: 0px 40px !important; /*Padding for the button*/
+            border-color: #272727;
+        }
+        .login-button:hover {
+            background-color: white !important; /*White background */
+            color: #5e17eb !important; /*Purple text */
+            border: 20px solid #272727 !important; /*Black border*/
+            border-radius: 30px !important; /*Rounded corners on hover*/
+            padding: 0px 40px !important; /*Padding for the button on hover*/
+            border-color: #272727;
+        }
+        table {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero is-fullheight">
+        <div class="hero-head">
+            <nav class="navbar">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a href="{{ url_for('index') }}" class="navbar-item">
+                            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="FarmSmart" class="logo">
+                        </a>
+                        <span class="navbar-burger" data-target="navbarMenuHeroA">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </div>
+                    <div id="navbarMenuHeroA" class="navbar-menu">
+                        <div class="navbar-end">
+                            <a href="{{ url_for('index') }}" class="navbar-item">Home</a>
+                            {% if current_user.is_anonymous %}
+                                <a href="{{ url_for('users.register') }}" class="navbar-item">Register</a>
+                                <a href="{{ url_for('users.login') }}" class="navbar-item login-button">Login</a>
+                            {% endif %}
+                            {% if current_user.is_authenticated and current_user.role == 'admin' %}
+                                <a href="{{ url_for('admin.admin') }}" class="navbar-item">Admin</a>
+                            {% endif %}
+                            {% if current_user.is_authenticated and current_user.role == 'user' %}
+                                <a href="{{ url_for('quiz.quiz') }}" class="navbar-item">Quiz</a>
+                                <a href="{{ url_for('forecast.index') }}" class="navbar-item">Forecast</a>
+                                <a href="{{ url_for('map.index') }}" class="navbar-item">Map</a>
+                            {% endif %}
+                            {% if current_user.is_authenticated %}
+                                <a href="{{ url_for('users.account') }}" class="navbar-item">Account</a>
+                                <a href="{{ url_for('users.logout') }}" class="navbar-item">Logout</a>
+                            {% endif %}
+                                <a href="{{ url_for('search.search') }}" class="navbar-item">Search</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </section>
+</body>
+</html>

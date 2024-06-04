@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select disease</title>
+    <link rel="stylesheet" href="/static/css/disease_form.css">
+</head>
+<body>
+    <h1>Maize</h1>
+    <h2>Select Disease</h2>
+    <form method="POST">
+        <div class="image-option">
+            <input type="submit" id="image1" name="disease" value="blight">
+            <label for="image1">
+                <img src="{{ url_for('static', filename='images/maize/corn_leaf_blight.jpeg') }}" alt="Blight maize leaf">
+            </label>
+            <h3> Blight</h3>
+        </div>
+        <div class="image-option">
+            <input type="submit" id="image2" name="disease" value="common-rust">
+            <label for="image2">
+                <img src="{{ url_for('static', filename='images/maize/common_rust.jpeg') }}" alt="Common Rust infected leaf">
+            </label>
+            <h3> Common Rust</h3>
+        </div>
+        <div class="image-option">
+            <input type="submit" id="image3" name="disease" value="gray-leaf-spot">
+            <label for="image3">
+                <img src="{{ url_for('static', filename='images/maize/gray_leaf_spot_1.jpeg') }}" alt="Gray Leaf Spot">
+            </label>
+            <h3> Gray Leaf Spot</h3>
+        </div>
+        <div class="image-option">
+            <input type="submit" id="image4" name="disease" value="dwarf-mosaic-potyvirus">
+            <label for="image4">
+                <img src="{{ url_for('static', filename='images/maize/dwarf_mosaic.jpg') }}" alt="Mosaic symptoms on maize">
+            </label>
+            <h3> Dwarf Mosaic Potyvirus</h3>
+        </div>
+        <div class="image-option">
+            <input type="submit" id="image5" name="disease" value="downy-mildew">
+            <label for="image5">
+                <img src="{{ url_for('static', filename='images/maize/downy_mildew_brown.jpg') }}" alt="Downy Mildew disease">
+            </label>
+            <h3> Downy Mildew</h3>
+        </div>
+        <div class="image-option">
+            <input type="submit" id="image6" name="disease" value="lethal-necrosis">
+            <label for="image6">
+                <img src="{{ url_for('static', filename='images/maize/lethal_necrosis.jpg') }}" alt="Lethal Necrosis maize">
+            </label>
+            <h3> Lethal Necrosis</h3>
+        </div>
+    </form>
+</body>
+{% endblock %}

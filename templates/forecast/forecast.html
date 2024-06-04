@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+<html>
+<head>
+    <title>Weather App</title>
+</head>
+<body>
+    <h1>Weather App</h1>
+
+    <form method="POST">
+        <label for="postcode">Enter postcode:</label>
+        <input type="text" id="postcode" name="postcode">
+        <input type="submit" value="Get Weather">
+    </form>
+
+    {% if location %}
+        <h2>Weather in {{ location }}</h2>
+        <p>Temperature: {{ temperature }}°C</p>
+        <p>Description: {{ description }}</p>
+        <p>Wind Speed: {{ wind_speed }} km/h</p>
+        <P>Feelslike = {{feelslike}}</P>
+        <p>Humidity = {{humidity}}</p>
+        <p>Visibility = {{visibility}}</p>
+        <p>Wind_dir = {{wind_dir}}</p>
+        <p>Uv_index = {{uv_index}}</p>
+        <p>Cloudcover = {{cloudcover}}</p>
+        <p>Precip = {{precip}}</p>
+        <p>Pressure = {{pressure}}</p>
+        <img src="{{ icon_url }}" alt="Weather Icon">
+    {% endif %}
+    {% if message %}
+        <h2>Weather Forecast</h2>
+        <p>{{ message }}</p>
+    {% endif %}
+
+</body>
+</html>
+{% endblock %}

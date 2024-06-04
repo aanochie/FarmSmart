@@ -1,0 +1,25 @@
+SQL Query Tests
+
+Instances:
+User information
+Quiz results
+Quiz questions
+
+Tests:
+Query functions to retrieve
+
+Questions
+Answers
+Results
+Roles
+/
+
+
+
+
+4 mc,
+give correct answer
+
+compare to db, e.g login
+
+check lottery db views.py, which creates user instance, e.g username = user.instance...

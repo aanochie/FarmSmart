@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+    <title>Downy Mildew Disease in Maize</title>
+    <link rel="stylesheet" href="/static/css/disease.css">
+</head>
+<body>
+<div class="container-text">
+    <h1>Downy Mildew Disease in Maize</h1>
+    <div class="image-container">
+        <img style="width: 300px" src="{{ url_for('static', filename='images/maize/downy_mildew_brown.jpg') }}" alt="Brown stipe Downy Mildew in Maize">
+        <p class="caption">Brown stripe downy mildew on maize</p>
+    </div>
+
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/maize/downy_mildew_sugarcane.jpg') }}" alt="Sugarcane Downy Mildew in Maize">
+        <p class="caption">Sugarcane downy mildew on maize</p>
+    </div>
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/maize/downy_mildew_philippine.jpg') }}" alt="Philippine Downy Mildew in Maize">
+        <p class="caption">Philippine downy mildew on maize</p>
+    </div>
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/maize/downy_mildew_java.jpg') }}" alt="Java Downy Mildew in Maize">
+        <p class="caption">Java downy mildew on maize</p>
+    </div>
+
+    <h2>Introduction</h2>
+    <p>Downy Mildew is a serious disease affecting maize, caused by several species of the fungal-like oomycete
+        pathogen <em>Peronosclerospora</em>. The disease can cause significant yield losses and is prevalent in warm,
+        humid climates.</p>
+
+    <h2>Type</h2>
+    <p><strong>Fungal</strong>: Peronosclerospora sorghi</p>
+    <p>Variants:</p>
+    <ul>
+        <li>Peronosclerospora maydis (Java downy mildew)</li>
+        <li>Peronosclerospora philippinensis (Philippine downy mildew) </li>
+        <li>Peronosclerospora sacchari (Sugarcane downy mildew) </li>
+        <li>Scleropthora rayssiae var. zeae (Brown stripe downy mildew)</li>
+    </ul>
+    <h2>Causes</h2>
+    <p>Downy Mildew spreads through airborne spores and infected seed. The pathogen thrives in warm, moist conditions
+        and can persist in soil and crop residues, making management challenging.</p>
+
+    <h2>Symptoms</h2>
+    <ul>
+        <li>Yellow to pale green streaks on leaves.</li>
+        <li>White, downy fungal growth on the underside of leaves, especially during humid conditions.</li>
+        <li>Stunted plant growth and distorted leaves.</li>
+        <li>Poor ear development and reduced grain yield.</li>
+    </ul>
+
+    <h2>Management</h2>
+    <ul>
+        <li><strong>Resistant Varieties:</strong> Planting maize varieties that are resistant to Downy Mildew.</li>
+        <li><strong>Seed Treatment:</strong> Using fungicide-treated seeds to prevent initial infection.</li>
+        <li><strong>Crop Rotation:</strong> Rotating with non-host crops to reduce the build-up of the pathogen in the soil.</li>
+        <li><strong>Field Sanitation:</strong> Removing and destroying infected plant debris to reduce the source of inoculum.</li>
+        <li><strong>Fungicide Applications:</strong> Applying fungicides can help control the disease, particularly in high-risk areas.</li>
+    </ul>
+</div>
+</body>
+
+{% endblock %}
