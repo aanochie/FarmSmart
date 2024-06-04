@@ -1,24 +1,28 @@
-from flask import Flask, render_template, redirect, url_for, request
+from flask import Flask, render_template, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from functools import wraps
 from flask_login import current_user, LoginManager
 from flask_qrcode import QRcode
+import os
+from dotenv import load_dotenv
 # Written by: Steven (c2045361), Zheng (c2041164), Aitsam (c2031215)
 # Asare (c2059143), Malak (c2001143), Nathan (c2026512)
 
+
 def create_app():
     # Set the secret key for session management
-    SECRET_KEY = 'secret key'
+    load_dotenv()
     app = Flask(__name__)
     # Configure the Flask application using the values from this module
     app.config.from_object(__name__)
-    app.config['TESTING'] = False
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///farm_smart.db'
-    app.config['SQLALCHEMY_ECHO'] = True
-    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-    app.config['RECAPTCHA_PUBLIC_KEY'] = '6Ld5jykpAAAAAOMYsHsjLRPFaPMpWIDGO2lx9wIz'
-    app.config['RECAPTCHA_PRIVATE_KEY'] = '6Ld5jykpAAAAAGovtwtXOmGLjZBz1uKLeirLVYay'
-    app.secret_key = SECRET_KEY
+
+    app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+    app.config['RECAPTCHA_PUBLIC_KEY'] = os.getenv('RECAPTCHA_PUBLIC_KEY')
+    app.config['RECAPTCHA_PRIVATE_KEY'] = os.getenv('RECAPTCHA_PRIVATE_KEY')
+    app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('SQLALCHEMY_DATABASE_URI')
+    app.config['SQLALCHEMY_ECHO'] = os.getenv('SQLALCHEMY_ECHO') == 'True'
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = os.getenv('SQLALCHEMY_TRACK_MODIFICATIONS') == 'True'
+
     return app
 
 
