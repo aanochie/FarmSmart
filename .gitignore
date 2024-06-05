@@ -3,3 +3,4 @@ __pycache__/
 quiz/__pycache__/
 venv/
 search/__pycache__/
+.env
